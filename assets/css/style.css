@@ -5,11 +5,15 @@ body{
 
 }
 .container-fluid{
-	width:100%;
+	width:95%;
 	height:100%;
 	margin:auto;
 }
-
+.fas {
+	color:rgb(235, 86, 86);
+	font-size:24px;
+	
+}
 
 
 .inputField {
@@ -33,40 +37,14 @@ body{
 	
 }
 
-#dog1 {
-	
-	
-	height:400px;
-	background-image: url(inputimg.jpg);
-	background-size: 100%;
-}
+.dogReturn{
 
-#dog2 {
-	
-	height:400px;
-	background-image: url(inputimg.jpg);
-	background-size: 100%;
-}
-
-#dog3{
-	
 	height:400px;
 	background-image: url(inputimg.jpg);
 	background-size: 100%;
 
 }
-#dog4{
-	
-	height:400px;
-	background-image: url(inputimg.jpg);
-	background-size: 100%;
-}
-#dog5{
-	
-	height:400px;
-	background-image: url(inputimg.jpg);
-	background-size: 100%;
-}
+
 #jumbotron1{
 	margin-top:10px;
 	margin-bottom:15px;
@@ -81,9 +59,6 @@ body{
 	
 }
 
-#openText{
-	color:black;
-}
 
 #jumbotron2{
 	height:600px;
@@ -93,8 +68,11 @@ body{
 }
 
 #map {
-	height:40%;
-	width:99%;
+	height:400px;
+	width:100%;
+	margin-left:5px;
+	border: solid rgb(239, 239, 240) 10px;
+	size:100%;
 }
 
 
