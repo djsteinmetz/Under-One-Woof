@@ -22,9 +22,10 @@ body{
 	padding:1%;
 	background-image: url(inputimg.jpg);
 	background-size: 100%;
+	text-align: center;
 }
 .card{
-	margin-left19%;
+	margin-left:19%;
 	margin: 2px auto;
 }
 

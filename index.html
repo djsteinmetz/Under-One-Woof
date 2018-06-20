@@ -1,117 +1,93 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Dog Finder</title>
-	
+
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+	 crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	
+
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
 </head>
+
 <body>
-<div class="container-fluid">
+	<div class="container-fluid">
 
-				<div class="jumbotron jumbotron-billboard" id=jumbotron1>
-					 <div class="img"></div>
-						  <div class="container">
-							  <div class="row">
-								  <div class="col-sm-12" id=openText>
-									<h2>A house<br> is never lonely<br>
-										where a<br> loving dog waits.
-									</h2>
-								  </div>
-							  </div>
-						 </div>
-					 </div>
-				
-
-			<div class= "row" >
-
-					<div class="col-sm-4 inputField"id="search">
-						<h3>Find your future dog!</h3>
-						<br>
-						<label for="location">Enter your location: </label>
-						<input type="user location" class="form-control" id="location" placeholder="Location">
-						<br>
-						<label for="breed">Your desired breed: </label>
-						<input type="user location" class="form-control" id="breed" placeholder="Breed">
-						<br>
-						<label for="gender">Gender: </label>
-						<select class="form-control" id="gender select">
-								<option>Male</option>
-								<option>Female</option>
-								<option>Male or Female</option>
-						</select>
-					    <br>
-						<button type="button" class="btn btn-danger" id="favoritesBtn">Favorites</button>
-						<button type="button" class="btn btn-primary" id="submitBtn">Submit</button>
-						<br>
-					</div>	
-				
-				
-								  <div class="col-sm-8" id=mapSpace> 
-									 <img id= "map" src="assets/css/carousel1.jpg"><img>
-				 		          </div>
-				
-				  </div>
-				  
+		<div class="jumbotron jumbotron-billboard" id=jumbotron1>
+			<div class="img"></div>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12" id=openText>
+						<h2>A house
+							<br> is never lonely
+							<br> where a
+							<br> loving dog waits.
+						</h2>
+					</div>
+				</div>
+			</div>
+		</div>
 
 
-  <div class="hidde" id="hiddenElements">
+		<div class="row">
+
+			<div class="col-sm-12 inputField" id="search">
+				<h3>Find your future dog!</h3>
+				<br>
+				<label for="location">Enter your location: </label>
+				<input type="user location" class="form-control" id="location" placeholder="Location">
+				<br>
+				<label for="breed">Your desired breed: </label>
+				<input type="user location" class="form-control" id="breed" placeholder="Breed">
+				<br>
+				<label for="gender">Gender: </label>
+				<select class="form-control" id="gender select">
+					<option>Male</option>
+					<option>Female</option>
+					<option>Male or Female</option>
+				</select>
+				<br>
+				<button type="button" class="btn btn-danger" id="favoritesBtn">Favorites</button>
+				<button type="button" class="btn btn-primary" id="submitBtn">Submit</button>
+				<br>
+			</div>
+		</div>
 
 
-					  <div class="row">                    
-								<div class="col-sm-4 dogReturn"id="dog1">
-									<div class="card" style="width: 22rem;">
-											<img class="center-block" src="assets/css/dog1.jpeg" alt="dog1">
-												<div class="card-body">
-												 	  <h4 class="card-title">Dog 1 Name Return<a href=""> <i class="fas fa-heartbeat"></i></a></h4>
-													  <p class="card-text"id="dog1Gender">Dog 1 Gender Return</p>
-													  <p class="card-text"id="dog1Age">Dog 1 Age Return</p>
-													  <a href="#" class="btn btn-primary"id="dog1Link">Href to full dog 1 profile</a>
-													 
-													 
-												</div>
-									</div>	
-								</div>
+		<div class="row">
 
-										<div class="col-sm-4 dogReturn"id="dog2">
-											placeholder for dog return 2
-										</div>   
+			<div class="col-sm-12" id=mapSpace>
+				<img id="map" src="assets/css/carousel1.jpg">
+				<img>
+			</div>
+
+		</div>
+
 		
-					
-										<div class="col-sm-4 dogReturn"id="dog3">
-											placeholder for dog return 3
-										</div> 
-						</div>
+		<div class="hidde" id="hiddenElements">
 
-								<div class="row">
-											<div class="col-sm-4 dogReturn"id="dog4">
-												placeholder for dog return 4
-											</div> 
+			<div class="row">
+				<div class="col-sm-12" id="cardSpace">
 
-											<div class="col-sm-4 dogReturn"id="dog5">
-												placeholder for dog return 5
-											</div> 
+				</div>
+			</div>
 
-											<div class="col-sm-4 dogReturn"id="dog6">
-												placeholder for dog return 6
-											</div> 
-								</div>
-	  
-  </div>
-  </div>
-  
-	
+		</div>
+	</div>
 
 
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-	
+
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+	 crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+	 crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+	 crossorigin="anonymous"></script>
+
 
 </body>
-    
