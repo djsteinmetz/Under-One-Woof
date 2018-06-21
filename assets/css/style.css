@@ -1,0 +1,80 @@
+
+body{
+	font-family: 'Ubuntu', sans-serif;
+	background-color: rgb(239, 239, 240);
+
+}
+.container-fluid{
+	width:95%;
+	height:100%;
+	margin:auto;
+}
+.fas {
+	color:rgb(235, 86, 86);
+	font-size:24px;
+	
+}
+
+
+.inputField {
+
+	height:400px;
+	padding:1%;
+	background-image: url(inputimg.jpg);
+	background-size: 100%;
+	text-align: center;
+}
+.card{
+	margin-left:19%;
+	margin: 2px auto;
+}
+
+/* .col-sm-4{
+	border: solid  rgb(239, 239, 240) 8px;
+	border-right: solid  rgb(239, 239, 240) 20px;
+	border-left: solid rgb(239, 239, 240) 20px;
+	text-align: center;
+	
+	
+}  
+
+.dogReturn{
+
+	height:400px;
+	background-image: url(inputimg.jpg);
+	background-size: 100%;
+
+} */
+
+#jumbotron1{
+	margin-top:10px;
+	margin-bottom:15px;
+	text-align:center;
+	background-image: url("jumbotron.jpeg");
+	background-size:100%;
+	background-position:5%;
+	opacity: .95;
+	height:275px;
+	color:black;
+	font-weight:bolder;
+	
+}
+
+
+#map {
+	height:400px;
+	width:100%;
+	margin-left:5px;
+	border: solid rgb(239, 239, 240) 10px;
+	size:100%;
+}
+
+#favoritesBtn {
+	margin-right:5px;
+}
+
+#submitBtn {
+	margin-left:5px;
+}
+
+
