@@ -29,14 +29,14 @@ body{
 	margin: 2px auto;
 }
 
-.col-sm-4{
+/* .col-sm-4{
 	border: solid  rgb(239, 239, 240) 8px;
 	border-right: solid  rgb(239, 239, 240) 20px;
 	border-left: solid rgb(239, 239, 240) 20px;
 	text-align: center;
 	
 	
-}
+}  
 
 .dogReturn{
 
@@ -44,7 +44,7 @@ body{
 	background-image: url(inputimg.jpg);
 	background-size: 100%;
 
-}
+} */
 
 #jumbotron1{
 	margin-top:10px;
@@ -61,13 +61,6 @@ body{
 }
 
 
-#jumbotron2{
-	height:600px;
-	width:100%;
-	text-align:center;
-	
-}
-
 #map {
 	height:400px;
 	width:100%;
@@ -76,6 +69,12 @@ body{
 	size:100%;
 }
 
+#favoritesBtn {
+	margin-right:5px;
+}
 
+#submitBtn {
+	margin-left:5px;
+}
 
 
