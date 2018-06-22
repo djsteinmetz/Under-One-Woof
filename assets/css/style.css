@@ -5,7 +5,7 @@ body{
 
 }
 .container-fluid{
-	width:95%;
+	width:99%;
 	height:100%;
 	margin:auto;
 }
@@ -20,7 +20,7 @@ body{
 
 	height:400px;
 	padding:1%;
-	background-image: url(inputimg.jpg);
+	background-image: url(../images/inputimg.jpg);
 	background-size: 100%;
 	text-align: center;
 }
@@ -50,7 +50,7 @@ body{
 	margin-top:10px;
 	margin-bottom:15px;
 	text-align:center;
-	background-image: url("jumbotron.jpeg");
+	background-image: url(../images/jumbotron.jpeg);
 	background-size:100%;
 	background-position:5%;
 	opacity: .95;
