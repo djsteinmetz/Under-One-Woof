@@ -15,19 +15,10 @@ $(document).ready(function () {
 
     function bindButtons() {
         // document.getElementById("submitZip").addEventListener("click", function(event) {
-        $("#submitZip").on("click", function (event) {
-
-
+        $("#submitBtn").on("click", function (event) {
             event.preventDefault();
-
             // getting zip code from form entry by user.
             var zip = $("#zip").val().trim();
-            // // var animal="dog";
-            // var location=zip;
-            // var output="full";
-            // var format="json"
-            // document.getElementById("zip").value;
-
             var queryUrl = "http://api.petfinder.com/pet.find";
 
             // filling out the query with ajax
@@ -39,7 +30,6 @@ $(document).ready(function () {
                 dataType: "jsonp",
                 data: {
                     key: apiKey,
-
                     animal: "dog",
                     "location": zip,
                     output: "full",
@@ -54,35 +44,32 @@ $(document).ready(function () {
                 success: function (response) {
                     // debug with console log
                     console.log(response);
-                    
-                    for (var i=0; i<10; i++){
-                    var dogName = response.petfinder.pets.pet[i].name.$t;
-                    console.log(dogName);
-                    var img = response.petfinder.pets.pet[i].media.photos.photo[i].$t;
-                    console.log(img);
-                    var id = response.petfinder.pets.pet[i].id.$t;
-                        console.log(id);
-                    var newName = document.createElement("a");
 
-                    var newDiv = document.createElement("div");
-
-                    newName.textContent = dogName;
-
-                    newName.href = "https://www.petfinder.com/petdetail" + id;
-
-                    var newImg = document.createElement("img");
-
-                    newImg.src = img;
-
-                    // adding the results from the JSON to the webpage.
-                    var list = document.createElement("div");
-                    list.setAttribute("id", "List");
-                    document.body.appendChild(list);
-
-                    newDiv.appendChild(newName);
-                    list.appendChild(newDiv);
-                    list.appendChild(newImg);
-                }//end of forloop
+                    for (var i = 0; i < 10; i++) {
+                        // JSONP response variables
+                        var dogName = response.petfinder.pets.pet[i].name.$t;
+                        var img = response.petfinder.pets.pet[i].media.photos.photo[2].$t;
+                        var id = response.petfinder.pets.pet[i].id.$t;
+                        var gender = response.petfinder.pets.pet[i].sex.$t;
+                        var breed = response.petfinder.pets.pet[i].breeds.breed;
+                        var age = response.petfinder.pets.pet[i].age.$t;
+                        console.log(dogName);
+                        // console.log(img);
+                        // console.log(id);
+                        console.log(gender);
+                        console.log(breed);
+                        console.log(age);
+                        var dogDiv = $("<div class='card'>");
+                        var div = $("<div class='card-body'>").html("<h5 class='card-title text-center'>" + dogName + '</h5>');
+                        var ul = $("<ul class='list-group list-group-flush'>");
+                        var dogImage = $("<img class='card-img-top' alt='Card image cap'>");
+                        dogImage.attr("src", img);
+                        dogDiv.prepend(div);
+                        dogDiv.prepend(dogImage);
+                        dogDiv.append(ul);
+                        ul.append("<li class='list-group-item'><strong>Source:</strong> " + "https://www.petfinder.com/petdetail/" + id + "<br/>")
+                        $("#cardSpace").prepend(dogDiv);
+                    }//end of forloop
                 } // end then function
 
 
