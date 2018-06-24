@@ -5,58 +5,32 @@ body{
 
 }
 .container-fluid{
-	width:95%;
+	width:100%;
 	height:100%;
-	margin:auto;
-}
-.fas {
-	color:rgb(235, 86, 86);
-	font-size:24px;
-	
+	margin:0;
 }
 
 nav {
 	margin-bottom:0px!Important;
 }
 
+
+nav {
+	margin-bottom:0px!Important;
+
+}
+
 li{
 	margin-right: 5px;
 }
-.inputField {
 
-	height:400px;
-	padding:1%;
-	background-image: url(inputimg.jpg);
-	background-size: 100%;
-	text-align: center;
-}
-.card{
-	margin-left:19%;
-	margin: 2px auto;
-}
 
-/* .col-sm-4{
-	border: solid  rgb(239, 239, 240) 8px;
-	border-right: solid  rgb(239, 239, 240) 20px;
-	border-left: solid rgb(239, 239, 240) 20px;
-	text-align: center;
-	
-	
-}  
-
-.dogReturn{
-
-	height:400px;
-	background-image: url(inputimg.jpg);
-	background-size: 100%;
-
-} */
 
 #jumbotron1{
 	/* margin-top:10px; */
 	margin-bottom:15px;
 	text-align:center;
-	background-image: url("jumbotron.jpeg");
+	background-image: url("../images/jumbotron.jpeg");
 	background-size:100%;
 	background-position:5%;
 	opacity: .95;
@@ -68,19 +42,27 @@ li{
 
 
 #map {
-	height:400px;
+	height:500px;
 	width:100%;
-	margin-left:5px;
+	
 	border: solid rgb(239, 239, 240) 10px;
 	size:100%;
 }
 
-#favoritesBtn {
-	margin-right:5px;
+.forms{
+	text-align:center;
+	font-size:18px;
+	
+	
 }
 
-#submitBtn {
-	margin-left:5px;
+footer {
+	color:white;
+	text-align:center;
+	line-height:1.5;
+	padding-top:5px;
+	font-size:16px;
+	border-top: solid 2px rgb(152, 165, 160);
 }
 
 

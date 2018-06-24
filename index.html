@@ -13,7 +13,32 @@
 
 </head>
 
-<body>
+<body class="bg-dark">
+
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<a class="navbar-brand" href="#">Navbar</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+		 aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto" style="list-style-type:none">
+				<li class="nav-item active">
+					<a class="nav-link" href="#">Home
+						<span class="sr-only">(current)</span>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="petsinfo.html">Dog FAQs</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="resources.html">Helpful Resources</a>
+				</li>
+				
+			</ul>
+		</div>
+	</nav>
 
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		<a class="navbar-brand" href="#">Navbar</a>
@@ -55,46 +80,56 @@
 		</div>
 	</div>
 
-	<div class="container-fluid">
 
-		<div class="row">
+<div class="container-fluid">	
 
-			<div class="col-sm-4 inputField" id="search">
-				<h3>Find your future dog!</h3>
-				<br>
-				<label for="location">Enter your Zip Code: </label>
-				<input type="user location" class="form-control" id="zip" placeholder="Location">
-				<br>
-				<label for="breed">Your desired breed: </label>
-				<input type="user location" class="form-control" id="breed" placeholder="Breed">
-				<br>
-				<label for="gender">Gender: </label>
-				<select class="form-control" id="gender select">
-					<option>Male</option>
-					<option>Female</option>
-					<option>Male or Female</option>
-				</select>
-				<br>
-				<button type="button" class="btn btn-danger" id="favoritesBtn">Favorites</button>
-				<button type="button" class="btn btn-primary" id="submitBtn">Submit</button>
-				<br>
+            <div class="row navbar bg-dark">
+					<div class="col-sm-12 " id="searchBar">
+                        
+                            <section class="forms">
+                                    <form action="" class="location-form">
+                                        <!-- <label for="location">Postal Code/Zip Code:</label> -->
+                                        
+                                        <input type="text" id="zip" placeholder="<Enter Your Zip Code Here>"><input type="submit" id="submitBtn" value="Find Dogs">
+                                       
+                                    </form>
+
+                                </section>
+                
+                     </div>
+		    </div>
+		
+
+
+
+			<div class="row">
+
+
+				<div class="col-sm-12" id=mapSpace>
+					<div id="map"></div>
+				</div>
+			</div>
+			<br>
+			<br>
+			<div class="row">
+				<div class="col-sm-12 card-columns" id="cardSpace"></div>
 			</div>
 
-			<div class="col-sm-8" id=mapSpace>
-				<img id="map" src="assets/css/carousel1.jpg">
-				<img>
-			</div>
+</div>      
+                   
+    <footer>
+    <p>Built by Karen Beltran, Nicole Brasaemle, Corey Miller, and DJ Steinmetz Copyright &copy; 2018 Powered by Petfinder</p></a>
+    <footer>
+                
+        
 
-		</div>
 
-		<div class="row">
-			<div class="col-sm-12 card-columns" id="cardSpace"></div>
-		</div>
-	</div>
+
 	
 	<nav class="navbar justify-content-center navbar-dark bg-dark footer">
         <a class="navbar-brand" href="#"><p id="copyright">Built by Karen Beltran, Nicole Brasaemle, Corey Miller, and DJ Steinmetz Copyright &copy; 2018 Powered by Petfinder</p></a>
     </nav>
+
 
 
 	<!--jQuery and eventual firebase links-->
@@ -104,9 +139,12 @@
 	 crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
 	 crossorigin="anonymous"></script>
-
+     <script async defer
+     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWROZUo7K5pSAulbxMPqG9RUFa2LtA9lc&callback=initMap">
+   </script>
 	<!--Linking Javascript file-->
-	<script src="assets/javascript/app.js"></script>
+    <script src="assets/javascript/app.js"></script>
+    <script src="assets/javascript/mapScript.js"></script>
 
 </body>
 </html>
