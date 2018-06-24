@@ -77,4 +77,10 @@ body{
 	margin-left:5px;
 }
 
+#faq {
+	text-align: center;
+}
 
+.faqs {
+	color:rgb(255, 251, 236);
+}
