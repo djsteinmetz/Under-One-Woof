@@ -5,7 +5,7 @@
 	<title>Dog Finder</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
 	 crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -14,7 +14,32 @@
 
 </head>
 
-<body>
+<body class="bg-dark">
+
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<a class="navbar-brand" href="#">Navbar</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+		 aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto" style="list-style-type:none">
+				<li class="nav-item active">
+					<a class="nav-link" href="index.html">Home
+						<span class="sr-only">(current)</span>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="petsinfo.html">Dog FAQs</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="resources.html">Helpful Resources</a>
+				</li>
+
+			</ul>
+		</div>
+	</nav>
 
 	<div class="jumbotron jumbotron-billboard" id=jumbotron1>
 		<div class="img"></div>
@@ -30,55 +55,60 @@
 			</div>
 		</div>
 	</div>
-
 	<div class="container-fluid">
 
-		<div class="row">
+		<div class="row navbar bg-dark">
+			<div class="col-sm-12 " id="searchBar">
 
-			<div class="col-sm-4 inputField" id="search">
-				<h3>Find your future dog!</h3>
-				<br>
-				<label for="location">Enter your location: </label>
-				<input type="user location" class="form-control" id="location" placeholder="Location">
-				<br>
-				<label for="breed">Your desired breed: </label>
-				<input type="user location" class="form-control" id="breed" placeholder="Breed">
-				<br>
-				<label for="gender">Gender: </label>
-				<select class="form-control" id="gender select">
-					<option>Male</option>
-					<option>Female</option>
-					<option>Male or Female</option>
-				</select>
-				<br>
-				<button type="button" class="btn btn-danger" id="favoritesBtn">Favorites</button>
-				<button type="button" class="btn btn-primary" id="submitBtn">Submit</button>
-				<br>
+				<section class="forms">
+					<form action="" class="location-form">
+						<!-- <label for="location">Postal Code/Zip Code:</label> -->
+
+						<input type="text" id="zip" placeholder="<Enter Your Zip Code Here>">
+						<input type="submit" id="submitBtn" value="Find Dogs">
+
+					</form>
+
+				</section>
+
 			</div>
-
-			<div class="col-sm-8" id=mapSpace>
-				<img id="map" src="assets/css/carousel1.jpg">
-				<img>
-			</div>
-
 		</div>
 
 		<div class="row">
-			<div class="col-sm-12" id="cardSpace"></div>
+			<div class="col-sm-12" id=mapSpace>
+				<div id="map"></div>
+			</div>
 		</div>
-	</div>
+		<br>
+		<br>
+		<div class="row">
+			<div class="col-sm-12 card-columns" id="cardSpace"></div>
+		</div>
+	</div>	
+
+		<nav class="navbar justify-content-center navbar-dark bg-dark footer">
+			<a class="navbar-brand ftr" id="copyright"> Built by
+				<a href="https://github.com/BFRaven" target="_blank"> Karen Beltran</a>,
+				<a href="https://github.com/nbrasaemle" target="_blank">Nicole Brasaemle</a>,
+				<a href="https://github.com/Cmiller8421" target="_blank">Corey Miller</a>, and 
+				<a href="https://github.com/djsteinmetz" target="_blank">  DJ Steinmetz</a> Copyright &copy; 2018 Powered by Petfinder</p>
+			</a>
+		</nav>
 
 
+		<!--jQuery and eventual firebase links-->
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+		 crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		 crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		 crossorigin="anonymous"></script>
+		 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWROZUo7K5pSAulbxMPqG9RUFa2LtA9lc&callback=initMap">
+   		</script>
 
-	<!--jQuery and eventual firebase links-->
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-	 crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-	 crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-	 crossorigin="anonymous"></script>
-
-	<!--Linking Javascript file-->
-	<script src="assets/javascript/app.js"></script>
-
+		<!--Linking Javascript file-->
+		<script src="assets/javascript/app.js"></script>
+		<script src="assets/javascript/mapScript.js"></script>
 </body>
+
+</html>
