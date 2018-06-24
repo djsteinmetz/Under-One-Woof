@@ -15,11 +15,6 @@ nav {
 }
 
 
-nav {
-	margin-bottom:0px!Important;
-
-}
-
 li{
 	margin-right: 5px;
 }
@@ -55,6 +50,9 @@ li{
 	
 	
 }
+.resourcePage{
+	color:white;
+}
 
 footer {
 	color:white;
@@ -65,4 +63,12 @@ footer {
 	border-top: solid 2px rgb(152, 165, 160);
 }
 
+.footer {
+	color: white;
+	text-align:center;
+	line-height:1.5;
+	padding-top:5px;
+	font-size:16px;
+	border-top: solid 2px rgb(152, 165, 160);
+}
 
