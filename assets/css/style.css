@@ -63,6 +63,11 @@ footer {
 	border-top: solid 2px rgb(152, 165, 160);
 }
 
+
+#faq {
+	text-align: center;
+}
+
 .footer {
 	color: white;
 	text-align:center;
@@ -70,5 +75,9 @@ footer {
 	padding-top:5px;
 	font-size:16px;
 	border-top: solid 2px rgb(152, 165, 160);
+
 }
 
+.faqs {
+	color:rgb(255, 251, 236);
+}
