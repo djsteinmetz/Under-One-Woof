@@ -3,7 +3,8 @@
 
 <head>
 	<title>Dog Finder</title>
-
+    <!-- FavIcon -->
+    <link rel="icon" type="image/png" href="assets/branding/under-one-woof-logo_favicon.png">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
 	 crossorigin="anonymous">
@@ -17,7 +18,9 @@
 <body class="bg-dark">
 
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-		<a class="navbar-brand" href="#">Navbar</a>
+		<a class="navbar-brand" href="index.html">
+			<img src="assets/branding/under-one-woof-logo_logoBar5-light.png" width="200">
+		</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
 		 aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
@@ -42,15 +45,10 @@
 	</nav>
 
 	<div class="jumbotron jumbotron-billboard" id=jumbotron1>
-		<div class="img"></div>
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-12" id=openText>
-					<h2>A house
-						<br> is never lonely
-						<br> where a
-						<br> loving dog waits.
-					</h2>
+				<div class="col-md-12">
+					<img id="logo" src="assets/branding/under-one-woof-logo_full.png">
 				</div>
 			</div>
 		</div>
@@ -62,9 +60,9 @@
 
 				<section class="forms">
 					<form action="" class="location-form">
+						<h2>Find a dog for adoption near you!</h2>
 						<!-- <label for="location">Postal Code/Zip Code:</label> -->
-
-						<input type="text" id="zip" placeholder="<Enter Your Zip Code Here>">
+						<input type="text" id="zip" placeholder="Enter Your Zip Code">
 						<input type="submit" id="submitBtn" value="Find Dogs">
 
 					</form>
@@ -73,16 +71,15 @@
 
 			</div>
 		</div>
-
-		<div class="row">
-			<div class="col-sm-12" id=mapSpace>
-				<div id="map"></div>
-			</div>
-		</div>
 		<br>
 		<br>
 		<div class="row">
 			<div class="col-sm-12 card-columns" id="cardSpace"></div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12" id=mapSpace>
+				<div id="map"></div>
+			</div>
 		</div>
 	</div>	
 
