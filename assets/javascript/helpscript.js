@@ -24,6 +24,7 @@ $(document).on("click", "#input-resource", function (event) {
     var category = $("#category-input").val().trim();
     var description = $("#description-input").val().trim();
     var link = $("#link-input").val().trim();
+    console.log(link);
 
     database.ref().push({
         category: category,
@@ -50,7 +51,8 @@ database.ref().on("child_added", function(snapshot){
     categoryTd.text(newval.category);
     descriptionTd.text(newval.description);
     linkTd.html("<a href='" + newval.link + "' target='_blank'>" + newval.link + "</a>");
-    console.log(descriptionTd);
+    console.log("<a href='" + newval.link + "' target='_blank'>" + newval.link + "</a>");
+    // console.log(descriptionTd);
     newRow.append(categoryTd);
     newRow.append(descriptionTd);
     newRow.append(linkTd);
