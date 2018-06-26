@@ -3,21 +3,26 @@
 
 <head>
 	<title>Dog Finder</title>
-
+    <!-- FavIcon -->
+	<link rel="icon" type="image/png" href="assets/branding/under-one-woof-logo_favicon.png">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
-	 crossorigin="anonymous">
+	<!-- Bootstrap CDN -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+	<!-- Google Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
+	<!-- Reset CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<!-- Custom CSS -->
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
 </head>
 
-<body class="bg-dark">
-
+<body>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-		<a class="navbar-brand" href="#">Navbar</a>
+		<a class="navbar-brand" href="index.html">
+			<img src="assets/branding/under-one-woof-logo_logoBar5-light.png" width="200">
+		</a>
+
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
 		 aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
@@ -42,47 +47,35 @@
 	</nav>
 
 	<div class="jumbotron jumbotron-billboard" id=jumbotron1>
-		<div class="img"></div>
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-12" id=openText>
-					<h2>A house
-						<br> is never lonely
-						<br> where a
-						<br> loving dog waits.
-					</h2>
+				<div class="col-md-12 text-center">
+					<img id="logo" src="assets/branding/under-one-woof-logo_full-light.png">
 				</div>
 			</div>
 		</div>
 	</div>
-	<div class="container-fluid">
 
-		<div class="row navbar bg-dark">
-			<div class="col-sm-12 " id="searchBar">
+	<div class="container">
 
-				<section class="forms">
-					<form action="" class="location-form">
-						<!-- <label for="location">Postal Code/Zip Code:</label> -->
-
-						<input type="text" id="zip" placeholder="Enter Your Zip Code Here">
-						<input type="submit" id="submitBtn" value="Find Dogs">
-
-					</form>
-
-				</section>
-
-			</div>
-		</div>
 
 		<div class="row">
-			<div class="col-sm-12" id=mapSpace>
-				<div id="map"></div>
+			<div class="col-sm-12 text-center" id="searchBar">
+				<form>
+					<div class="form-group">
+						<input type="text" class="form-control" id="zip" placeholder="Find a dog to adopt!">
+						<button type="button" class="btn btn-info" id="submitBtn">Find Dogs!</button>
+					</div>
+				</form>
 			</div>
 		</div>
-		<br>
-		<br>
 		<div class="row">
 			<div class="col-sm-12 card-columns" id="cardSpace"></div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12" id="mapSpace">
+				<div id="map"></div>
+			</div>
 		</div>
 	</div>	
 

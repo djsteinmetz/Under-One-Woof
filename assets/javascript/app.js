@@ -36,30 +36,22 @@ $(document).ready(function () {
                     format: "json"
 
                 },
-
-                // .then(function (response) {
-
-                // hadling the response we get back from the call to Petfinder
-
+ 
                 success: function (response) {
                     // debug with console log
                     console.log(response);
-
+                    // Reset the card display
+                    $("#cardSpace").html("");
                     for (var i = 0; i < 10; i++) {
                         // JSONP response variables
                         var dogName = response.petfinder.pets.pet[i].name.$t;
                         var img = response.petfinder.pets.pet[i].media.photos.photo[2].$t;
                         var id = response.petfinder.pets.pet[i].id.$t;
-                        var gender = response.petfinder.pets.pet[i].sex.$t;
+
+                        // var gender = response.petfinder.pets.pet[i].sex.$t;
                         // var breed = response.petfinder.pets.pet[i].breeds.breed;
-                        var age = response.petfinder.pets.pet[i].age.$t;
-                        console.log(dogName);
-                        // console.log(img);
-                        // console.log(id);
-                        console.log(gender);
-                        console.log(age);
-                        var dogLink = $("<a>");
-                        dogLink.attr("href", "https://www.petfinder.com/petdetail/" + id)
+                        // var age = response.petfinder.pets.pet[i].age.$t;
+
                         var dogDiv = $("<div class='card'>");
                         var div = $("<div class='card-body'>").html("<h1 class='card-title'>" + dogName + '</h1>');
                         if (gender === 'F') {
@@ -70,24 +62,18 @@ $(document).ready(function () {
                             div.append('');
                         };
                         var ul = $("<ul class='list-group list-group-flush'>");
-                        var dogImage = $("<img class='card-img-top' alt='Card image cap'>");
-                        dogImage.attr("src", img);
+                        var dogImage = $("<a id='href" + i + "'><img src='" + img + "' id='displayImage" + i +  "'class='card-img-top' alt='Card image cap'></a>");
                         dogDiv.prepend(div);
                         dogDiv.prepend(dogImage);
                         dogDiv.append(ul);
-                        ul.append("<li class='list-group-item'><a href='https://www.petfinder.com/petdetail/" + id + "' target='_blank'>Check out my Profile!</a><br/>");
-                        // if(breed>0) {
-                        //     ul.append("<li class='list-group-item'><strong>Breed(s):</strong> " + breed[0].$t + ", " + breed[1].$t + "<br/>");
-                        // }
-                        // else {
-                        //     ul.append("<li class='list-group-item'><strong>Breed(s):</strong> " + breed[0].$t + "<br/>");   
-                        // }
+
+                        ul.append("<li class='list-group-item'><strong>Source:</strong> " + "https://www.petfinder.com/petdetail/" + id + "<br/>");
+
                         $("#cardSpace").prepend(dogDiv);
+                        $("#href"+ i).attr("href", "https://www.petfinder.com/petdetail/" + id);
                     }//end of forloop
                 } // end then function
-
-
-                // .then(function(response){
+                // TODO: Add a 'API call Fail' response
 
             });
         });
