@@ -56,19 +56,19 @@
 		</div>
 	</div>
 
-	<div class="container">
-
-
+	<div class="container" id="searchArea">
 		<div class="row">
 			<div class="col-sm-12 text-center" id="searchBar">
 				<form>
 					<div class="form-group">
-						<input type="text" class="form-control" id="zip" placeholder="Find a dog to adopt!">
+						<input type="number" class="form-control" id="zip" placeholder="Enter a zip code!">
 						<button type="button" class="btn btn-info" id="submitBtn">Find Dogs!</button>
 					</div>
 				</form>
 			</div>
 		</div>
+	</div>
+	<div class="container">
 		<div class="row">
 			<div class="col-sm-12 card-columns" id="cardSpace"></div>
 		</div>
@@ -79,29 +79,26 @@
 		</div>
 	</div>	
 
-		<nav class="navbar justify-content-center navbar-dark bg-dark footer">
-			<a class="navbar-brand ftr" id="copyright"> Built by
-				<a href="https://github.com/BFRaven" target="_blank"> Karen Beltran</a>,
-				<a href="https://github.com/nbrasaemle" target="_blank">Nicole Brasaemle</a>,
-				<a href="https://github.com/Cmiller8421" target="_blank">Corey Miller</a>, and 
-				<a href="https://github.com/djsteinmetz" target="_blank">  DJ Steinmetz</a> Copyright &copy; 2018 Powered by Petfinder</p>
-			</a>
-		</nav>
+	<nav class="navbar justify-content-center navbar-dark bg-dark footer">
+		<p class="navbar-brand" id="copyright">
+			<p>Built by:</p>
+			<p><a class = "author" href="https://github.com/BFRaven" target="_blank"> Karen Beltran Lopez,</a></p>
+			<p><a class = "author" href="https://github.com/nbrasaemle" target="_blank">Nicole Brasaemle,</a></p>
+			<p><a class = "author" href="https://github.com/Cmiller8421" target="_blank">Corey Miller</a></p>
+			<p>and</p>
+			<p><a class = "author" href="https://github.com/djsteinmetz" target="_blank">DJ Steinmetz</a>&nbsp;|&nbsp;&copy; 2018 Powered by <a class = "author" href="https://www.petfinder.com/">Petfinder</a></p>
+		</p>
+	</nav>
 
+	<!--jQuery and eventual firebase links-->
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWROZUo7K5pSAulbxMPqG9RUFa2LtA9lc&callback=initMap"></script>
 
-		<!--jQuery and eventual firebase links-->
-		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-		 crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-		 crossorigin="anonymous"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-		 crossorigin="anonymous"></script>
-		 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWROZUo7K5pSAulbxMPqG9RUFa2LtA9lc&callback=initMap">
-   		</script>
-
-		<!--Linking Javascript file-->
-		<script src="assets/javascript/app.js"></script>
-		<script src="assets/javascript/mapScript.js"></script>
+	<!--Linking Javascript file-->
+	<script src="assets/javascript/app.js"></script>
+	<script src="assets/javascript/mapScript.js"></script>
 </body>
 
 </html>

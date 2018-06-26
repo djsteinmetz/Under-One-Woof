@@ -60,26 +60,30 @@ h2 {
 	color:rgb(255, 251, 236);
 }
 
-footer {
+/* footer {
 	color:white;
 	text-align:center;
 	line-height:1.5;
 	padding-top:5px;
 	font-size:16px;
 	border-top: solid 2px rgb(152, 165, 160);
-}
+} */
 
 
 #faq {
 	text-align: center;
 }
 
+#zip {
+	margin-bottom: 10px;
+}
+
 .footer {
 	color: white;
 	text-align:center;
 	line-height:1.5;
-	padding-top:5px;
-	font-size:16px;
+	padding: 20px;
+	font-size:12px;
 	border-top: solid 2px rgb(152, 165, 160);
 
 }
@@ -93,4 +97,16 @@ footer {
 	margin: auto;
 	background-color: #f1f1f1;
 	
+}
+.author {
+	margin: 0px 5px 0px 5px;
+}
+
+a {
+	color: #f1f1f1;
+}
+
+a:hover {
+	color: #48a0b5;
+	text-decoration: none;
 }
