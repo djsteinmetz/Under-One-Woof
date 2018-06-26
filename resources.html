@@ -56,7 +56,7 @@
         </div>
     </div>
 
-    <div class="container resourcePage">
+    <div class="container-fluid resourcePage">
         <div class="row">
             <div class="col-sm-12">
                 <h2>Helpful Resources</h2>
@@ -64,31 +64,74 @@
         </div>
         <div class="row resourceRow">
             <div class="col-sm-12 resources">
-                
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Category</th>
+                            <th scope="col">Description: </th>
+                            <th scope="col">Link: </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
             </div>
         </div>
-        <br>
+        <div class="row">
+            <div class="col-sm-12">
+                <form>
+                    <div class="form-group">
+                        <label for="category-input">Category</label>
+                        <select class="form-control form-control-lg" id="category-input">
+                            <option>Health/Nutrition</option>
+                            <option>Behavior/Training</option>
+                            <option>Pet Supplies</option>
+                            <option>Veterinary Clinics</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description-input">Description</label>
+                        <input class="form-control" id="description-input" placeholder="Description">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="link-input">Link</label>
+                        <input class="form-control" id="link-input" placeholder="http://www." value="http://www.">
+                    </div>
+
+                    <button type="button" class="btn btn-light" id="input-resource">Add Resource</button>
+
+                </form>
+                <br>
+
+            </div>
+        </div>
     </div>
 
-    <nav class="navbar justify-content-center navbar-dark bg-dark footer">
+    <nav class="navbar justify-content-center fixed-bottom navbar-dark bg-dark footer">
         <a class="navbar-brand ftr" id="copyright"> Built by
             <a href="https://github.com/BFRaven" target="_blank"> Karen Beltran</a>,
             <a href="https://github.com/nbrasaemle" target="_blank">Nicole Brasaemle</a>,
-            <a href="https://github.com/Cmiller8421" target="_blank">Corey Miller</a>, and 
-            <a href="https://github.com/djsteinmetz" target="_blank">  DJ Steinmetz</a> Copyright &copy; 2018 Powered by Petfinder</p>
+            <a href="https://github.com/Cmiller8421" target="_blank">Corey Miller</a>, and
+            <a href="https://github.com/djsteinmetz" target="_blank"> DJ Steinmetz</a> Copyright &copy; 2018 Powered by Petfinder</p>
         </a>
     </nav>
 
-    <!--jQuery and eventual firebase links-->
+    <!--jQuery and firebase links-->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
 
     <!--Linking Javascript file-->
     <script src="assets/javascript/app.js"></script>
+    <script src="assets/javascript/helpscript.js"></script>
+
 
 </body>
 
