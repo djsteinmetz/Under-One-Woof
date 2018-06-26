@@ -47,8 +47,7 @@ $(document).ready(function () {
                         var dogName = response.petfinder.pets.pet[i].name.$t;
                         var img = response.petfinder.pets.pet[i].media.photos.photo[2].$t;
                         var id = response.petfinder.pets.pet[i].id.$t;
-
-                        // var gender = response.petfinder.pets.pet[i].sex.$t;
+                        var gender = response.petfinder.pets.pet[i].sex.$t;
                         // var breed = response.petfinder.pets.pet[i].breeds.breed;
                         // var age = response.petfinder.pets.pet[i].age.$t;
 
