@@ -57,6 +57,4 @@ infoWindow2.open(map,marker2);
       }
     });
   }
- 
-
 

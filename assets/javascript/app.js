@@ -21,8 +21,6 @@ $(document).ready(function () {
             var zip = $("#address").val().trim();
             var queryUrl = "http://api.petfinder.com/pet.find";
 
-            
-
             // filling out the query with ajax
 
             $.ajax({
@@ -53,23 +51,37 @@ $(document).ready(function () {
                         var img = response.petfinder.pets.pet[i].media.photos.photo[2].$t;
                         var id = response.petfinder.pets.pet[i].id.$t;
                         var gender = response.petfinder.pets.pet[i].sex.$t;
-                        var breed = response.petfinder.pets.pet[i].breeds.breed;
+                        // var breed = response.petfinder.pets.pet[i].breeds.breed;
                         var age = response.petfinder.pets.pet[i].age.$t;
                         console.log(dogName);
                         // console.log(img);
                         // console.log(id);
                         console.log(gender);
-                        console.log(breed);
                         console.log(age);
+                        var dogLink = $("<a>");
+                        dogLink.attr("href", "https://www.petfinder.com/petdetail/" + id)
                         var dogDiv = $("<div class='card'>");
-                        var div = $("<div class='card-body'>").html("<h5 class='card-title text-center'>" + dogName + '</h5>');
+                        var div = $("<div class='card-body'>").html("<h1 class='card-title'>" + dogName + '</h1>');
+                        if (gender === 'F') {
+                            div.append('Female');
+                        } else if (gender === 'M') {
+                            div.append('Male');
+                        } else {
+                            div.append('');
+                        };
                         var ul = $("<ul class='list-group list-group-flush'>");
                         var dogImage = $("<img class='card-img-top' alt='Card image cap'>");
                         dogImage.attr("src", img);
                         dogDiv.prepend(div);
                         dogDiv.prepend(dogImage);
                         dogDiv.append(ul);
-                        ul.append("<li class='list-group-item'><strong>Source:</strong> " + "https://www.petfinder.com/petdetail/" + id + "<br/>")
+                        ul.append("<li class='list-group-item'><a href='https://www.petfinder.com/petdetail/" + id + "' target='_blank'>Check out my Profile!</a><br/>");
+                        // if(breed>0) {
+                        //     ul.append("<li class='list-group-item'><strong>Breed(s):</strong> " + breed[0].$t + ", " + breed[1].$t + "<br/>");
+                        // }
+                        // else {
+                        //     ul.append("<li class='list-group-item'><strong>Breed(s):</strong> " + breed[0].$t + "<br/>");   
+                        // }
                         $("#cardSpace").prepend(dogDiv);
                     }//end of forloop
                 } // end then function
