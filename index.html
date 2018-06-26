@@ -13,32 +13,7 @@
 
 </head>
 
-<body class="bg-dark">
-
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-		<a class="navbar-brand" href="#">Navbar</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-		 aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav mr-auto" style="list-style-type:none">
-				<li class="nav-item active">
-					<a class="nav-link" href="#">Home
-						<span class="sr-only">(current)</span>
-					</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="petsinfo.html">Dog FAQs</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="resources.html">Helpful Resources</a>
-				</li>
-				
-			</ul>
-		</div>
-	</nav>
+<body onload="initialize()" class="bg-dark">
 
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		<a class="navbar-brand" href="#">Navbar</a>
@@ -80,7 +55,6 @@
 		</div>
 	</div>
 
-
 <div class="container-fluid">	
 
             <div class="row navbar bg-dark">
@@ -90,7 +64,7 @@
                                     <form action="" class="location-form">
                                         <!-- <label for="location">Postal Code/Zip Code:</label> -->
                                         
-                                        <input type="text" id="zip" placeholder="<Enter Your Zip Code Here>"><input type="submit" id="submitBtn" value="Find Dogs">
+                                        <input type="textbox" id="address" placeholder="<Enter Your Zip Code Here>"><input type="submit" id="submitBtn" value="Find Dogs"onclick="codeAddress()">
                                        
                                     </form>
 
@@ -104,31 +78,28 @@
 
 			<div class="row">
 
-
 				<div class="col-sm-12" id=mapSpace>
 					<div id="map"></div>
 				</div>
 			</div>
-			<br>
-			<br>
+	
 			<div class="row">
 				<div class="col-sm-12 card-columns" id="cardSpace"></div>
 			</div>
 
-</div>      
-                   
+</div>    
+
+
+    
+   
+
+
     <footer>
     <p>Built by Karen Beltran, Nicole Brasaemle, Corey Miller, and DJ Steinmetz Copyright &copy; 2018 Powered by Petfinder</p></a>
     <footer>
                 
         
 
-
-
-	
-	<nav class="navbar justify-content-center navbar-dark bg-dark footer">
-        <a class="navbar-brand" href="#"><p id="copyright">Built by Karen Beltran, Nicole Brasaemle, Corey Miller, and DJ Steinmetz Copyright &copy; 2018 Powered by Petfinder</p></a>
-    </nav>
 
 
 
