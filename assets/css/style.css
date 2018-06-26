@@ -30,19 +30,15 @@ h2 {
 }
 
 #jumbotron1{
-	/* margin-top:10px; */
-	margin-bottom:15px;
-	text-align:center;
-	background-image: url("../images/jumbotron.jpeg");
-	background-size:100%;
-	background-position:5%;
-	opacity: .95;
-	height:275px;
-	color:black;
-	font-weight:bolder;
-	height: 100%;
-	padding: 0px;
-	
+	/* The image used */
+	background-image: url("../images/photo-1477936432016-8172ed08637e-1.png");
+	/* padding: 150px 5px 150px 5px; */
+	/* Full height */
+	height: 50%;
+	/* Center and scale the image nicely */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 
@@ -90,4 +86,11 @@ footer {
 
 .faqs {
 	color:rgb(255, 251, 236);
+}
+
+#searchBar {
+	max-width: 250px;
+	margin: auto;
+	background-color: #f1f1f1;
+	
 }
