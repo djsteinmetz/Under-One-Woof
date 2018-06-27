@@ -69,7 +69,8 @@ $(document).ready(function () {
                         ul.append("<li class='list-group-item'><strong>Source:</strong> " + "https://www.petfinder.com/petdetail/" + id + "<br/>");
 
                         $("#cardSpace").prepend(dogDiv);
-                        $("#href"+ i).attr("href", "https://www.petfinder.com/petdetail/" + id);
+                        $("#href"+ i).attr("href", "https://www.petfinder.com/petdetail/" + id)
+                                     .attr("target", "_blank");
                     }//end of forloop
                 } // end then function
                 // TODO: Add a 'API call Fail' response
