@@ -17,7 +17,7 @@ $(document).ready(function () {
         // document.getElementById("submitZip").addEventListener("click", function(event) {
         $("#submitBtn").on("click", function (event) {
             $("#cardHidden").css("display", "block");
-            $("#mapHidden").css("display", "block");
+           // $("#mapHidden").css("display", "block");
             $("#mapDescriptor").html("Animal Shelters near your search area!");
             event.preventDefault();
             // getting zip code from form entry by user.
@@ -68,8 +68,6 @@ $(document).ready(function () {
                         dogDiv.prepend(div);
                         dogDiv.prepend(dogImage);
                         dogDiv.append(ul);
-
-                        ul.append("<li class='list-group-item'><strong>Source:</strong> " + "https://www.petfinder.com/petdetail/" + id + "<br/>");
 
                         $("#cardSpace").prepend(dogDiv);
                         $("#href"+ i).attr("href", "https://www.petfinder.com/petdetail/" + id)
