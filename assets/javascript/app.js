@@ -18,8 +18,8 @@ $(document).ready(function () {
         $("#submitBtn").on("click", function (event) {
             event.preventDefault();
             // getting zip code from form entry by user.
-            var zip = $("#zip").val().trim();
-            var queryUrl = "http://api.petfinder.com/pet.find";
+            var zip = $("#address").val().trim();
+            var queryUrl = "https://api.petfinder.com/pet.find";
 
             // filling out the query with ajax
 
@@ -69,7 +69,8 @@ $(document).ready(function () {
                         ul.append("<li class='list-group-item'><strong>Source:</strong> " + "https://www.petfinder.com/petdetail/" + id + "<br/>");
 
                         $("#cardSpace").prepend(dogDiv);
-                        $("#href"+ i).attr("href", "https://www.petfinder.com/petdetail/" + id);
+                        $("#href"+ i).attr("href", "https://www.petfinder.com/petdetail/" + id)
+                                     .attr("target", "_blank");
                     }//end of forloop
                 } // end then function
                 // TODO: Add a 'API call Fail' response
