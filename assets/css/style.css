@@ -34,6 +34,11 @@ h4 {
 	color: #f1f1f1;
 	font-size: 50px;
 }
+h5 {
+	text-align: center;
+	font-size: 30px;
+	color: #222;
+}
 td {
 	color: #222;
 	font-size: 14px;
@@ -51,9 +56,8 @@ td {
 	background-size: cover;
 }
 #map {
-	height:500px;
+	height:600px;
 	width:100%;
-	
 	border: solid rgb(239, 239, 240) 10px;
 	size:100%;
 }
@@ -76,6 +80,7 @@ td {
 	padding: 20px;
 	font-size:12px;
 	border-top: solid 2px rgb(152, 165, 160);
+	margin-top: 20px;
 }
 /* Frequently Asked Questions Page */
 #faq,
@@ -95,7 +100,6 @@ td {
 	margin-bottom: 25px;
 }
 #searchBar {
-	max-width: 250px;
 	margin: auto;
 }
 .author {
@@ -121,4 +125,17 @@ a:hover {
 	background-size: cover;
 	padding: 120px;
 	margin: 20px 0px 20px 0px;
+}
+
+#cardSpace {
+	height: 600px;
+	overflow: scroll;
+}
+
+#cardHidden {
+	display: none;
+}
+
+#mapHidden {
+	display: none;
 }

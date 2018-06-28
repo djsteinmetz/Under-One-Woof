@@ -53,10 +53,13 @@
 			</div>
 		</div>
 	</div>
-
-	<div class="container" id="searchArea">
+    <!-- Main content area -->
+	<div class="container">
 		<div class="row">
-			<div class="col-sm-12 text-center" id="searchBar">
+			<div class="col-md-7" id="mapSpace">
+				<h5 id="mapDescriptor">Search for Available dogs near your zip code!</h5>
+			</div>
+			<div class="col-md-5 text-center" id="searchBar">
 				<form>
 					<div class="form-group">
 						<input type="number" class="form-control" id="address" placeholder="Enter a zip code!">
@@ -65,20 +68,28 @@
 				</form>
 			</div>
 		</div>
-	</div>
-	<div class="container">
 		<div class="row">
-			<div class="col-sm-12 card-columns" id="cardSpace"></div>
+			<div class="col-md-7" id="mapHidden">
+				<div id="map"></div>
+			</div>
+			<div class="col-md-5" id="cardHidden">
+				<div>
+					<div class="card-body" id="cardSpace"></div>
+				</div>
+			</div>
 		</div>
-	<br>
+	</div>
+	<!-- <div class="container">
 		<div class="row">
-			<div class="col-sm-12" id="mapSpace">
+			<div class="col-md-12 card-columns" id="cardSpace"></div>
+		</div>
+		<div class="row">
+			<div class="col-md-12" id="mapSpace">
 				<div id="map"></div>
 			</div>
 		</div>
-	</div>	
-	<br>
-	<br>
+	</div>	 -->
+	<!-- End main content area -->
 	<nav class="navbar justify-content-center navbar-dark bg-dark footer">
 		<p class="navbar-brand" id="copyright">
 			<p>Built by:</p>
