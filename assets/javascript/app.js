@@ -72,9 +72,9 @@ $(document).ready(function () {
                         $("#href"+ i).attr("href", "https://www.petfinder.com/petdetail/" + id)
                                      .attr("target", "_blank");
                     }//end of forloop
-                } // end then function
-                // TODO: Add a 'API call Fail' response
-
+                }, // end then function
+                
+                
             });
         });
     }

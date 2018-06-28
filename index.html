@@ -61,7 +61,8 @@
 			<div class="col-sm-12 text-center" id="searchBar">
 				<form>
 					<div class="form-group">
-						<input type="number" class="form-control" id="address" placeholder="Enter a zip code!">
+						<div id="zip-error">Please Enter a Valid Zip Code</div>
+						<input type="number" class="form-control" id="address" placeholder="Enter a zip code!" required>
 						<button type="button" class="btn btn-info" id="submitBtn"onclick="codeAddress()">Find Dogs!</button>
 					</div>
 				</form>

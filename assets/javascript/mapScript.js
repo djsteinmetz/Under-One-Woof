@@ -16,6 +16,14 @@ var geocoder;
 
   function codeAddress() {
     var address = document.getElementById('address').value;
+    if (address.length < 5 || address.length > 5){
+      console.log(this)
+      $("#zip-error").css("display", "block");
+      return false
+    }
+    else {
+      $("#zip-error").css("display", "none");
+    }
     geocoder.geocode( { 'address': address}, function(results, status) {
       if (status == 'OK') {
 
@@ -327,7 +335,7 @@ infoWindow17.open(map,marker17);
 
         
       } else {
-        alert('Geocode was not successful for the following reason: ' + status);
+        console.log('Geocode was not successful for the following reason: ' + status); 
       }
     });
   }
