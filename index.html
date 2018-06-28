@@ -38,7 +38,9 @@
 					<a class="nav-link" href="petsinfo.html">Dog FAQs</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="resources.html">Helpful Resources</a>
+		 <!-- Changed actual html from Helpful Resources to Community -->
+
+					<a class="nav-link" href="resources.html">Community Resources</a>
 				</li>
 			</ul>
 		</div>
@@ -62,7 +64,8 @@
 			<div class="col-md-5 text-center" id="searchBar">
 				<form>
 					<div class="form-group">
-						<input type="number" class="form-control" id="address" placeholder="Enter a zip code!">
+						<div id="zip-error">Please Enter a Valid Zip Code</div>
+						<input type="number" class="form-control" id="address" placeholder="Enter a zip code!" required>
 						<button type="button" class="btn btn-info" id="submitBtn"onclick="codeAddress()">Find Dogs!</button>
 					</div>
 				</form>

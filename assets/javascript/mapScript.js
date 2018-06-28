@@ -16,6 +16,14 @@ var geocoder;
 
   function codeAddress() {
     var address = document.getElementById('address').value;
+    if (address.length < 5 || address.length > 5){
+      console.log(this)
+      $("#zip-error").css("display", "block");
+      return false
+    }
+    else {
+      $("#zip-error").css("display", "none");
+    }
     geocoder.geocode( { 'address': address}, function(results, status) {
       if (status == 'OK') {
 
@@ -24,7 +32,7 @@ var geocoder;
         var marker = new google.maps.Marker({
           position:{lat:44.996832, lng:-93.280261},
           map:map,
-          icon:'https://www.shareicon.net/data/32x32/2016/05/16/766092_dog_512x512.png'
+          icon:'assets/images/mapIcon.png'
       });
       var infoWindow = new google.maps.InfoWindow({
         content:'<p> Minneapolis Animal Shelter<br>Address: 212 17th Ave. N., Minneapolis, MN 55411<br>Phone: 612-673-MACC (6222)<br><a href="http://petharbor.com/results.asp?searchtype=ADOPT&friends=1&samaritans=1&nosuccess=0&rows=10&imght=120&imgres=thumb&fontface=arial&fontsize=10&bgcolor=ffffff&imgborder=1&col_hdr_bg=B4CD95&col_hdr_fg=000000&col_bg=ffffff&col_bg2=B4CD95&col_fg=000000&sbg=4D5864&zip=55411&shelterlist=%27MNPL%27&atype=dog&start=4&nomax=1&page=1&where=type_DOG&nopod=1&view=sysadm.v_mnpl"target"_blank">Our Adoptable Dogs</a> </p>'
@@ -39,7 +47,7 @@ var geocoder;
   var marker2 = new google.maps.Marker({
     position:{lat:45.279124, lng:-92.990531},
     map:map,
-    icon:'https://www.shareicon.net/data/32x32/2016/05/16/766092_dog_512x512.png'
+    icon:'assets/images/mapIcon.png'
 });
 var infoWindow2 = new google.maps.InfoWindow({
 
@@ -56,7 +64,7 @@ map.setCenter(results[0].geometry.location);
 var marker3 = new google.maps.Marker({
   position:{lat:45.106629, lng:-93.333117},
   map:map,
-  icon:'https://www.shareicon.net/data/32x32/2016/05/16/766092_dog_512x512.png'
+  icon:'assets/images/mapIcon.png'
 });
 var infoWindow3 = new google.maps.InfoWindow({
 
@@ -74,7 +82,7 @@ map.setCenter(results[0].geometry.location);
 var marker4 = new google.maps.Marker({
   position:{lat:44.974696, lng:-93.154784},
   map:map,
-  icon:'https://www.shareicon.net/data/32x32/2016/05/16/766092_dog_512x512.png'
+  icon:'assets/images/mapIcon.png'
 });
 var infoWindow4 = new google.maps.InfoWindow({
 
@@ -92,7 +100,7 @@ map.setCenter(results[0].geometry.location);
 var marker5 = new google.maps.Marker({
   position:{lat:44.987351, lng:-93.329415},
   map:map,
-  icon:'https://www.shareicon.net/data/32x32/2016/05/16/766092_dog_512x512.png'
+  icon:'assets/images/mapIcon.png'
 });
 var infoWindow5 = new google.maps.InfoWindow({
 
@@ -110,7 +118,7 @@ map.setCenter(results[0].geometry.location);
 var marker6 = new google.maps.Marker({
   position:{lat:44.789345, lng:-93.601839},
   map:map,
-  icon:'https://www.shareicon.net/data/32x32/2016/05/16/766092_dog_512x512.png'
+  icon:'assets/images/mapIcon.png'
 });
 var infoWindow6 = new google.maps.InfoWindow({
 
@@ -128,7 +136,7 @@ map.setCenter(results[0].geometry.location);
 var marker7 = new google.maps.Marker({
   position:{lat:45.198214, lng:-93.301995},
   map:map,
-  icon:'https://www.shareicon.net/data/32x32/2016/05/16/766092_dog_512x512.png'
+  icon:'assets/images/mapIcon.png'
 });
 var infoWindow7 = new google.maps.InfoWindow({
 
@@ -146,7 +154,7 @@ map.setCenter(results[0].geometry.location);
 var marker8 = new google.maps.Marker({
   position:{lat:44.797396, lng:-93.527286},
   map:map,
-  icon:'https://www.shareicon.net/data/32x32/2016/05/16/766092_dog_512x512.png'
+  icon:'assets/images/mapIcon.png'
 });
 var infoWindow8 = new google.maps.InfoWindow({
 
@@ -165,7 +173,7 @@ map.setCenter(results[0].geometry.location);
 var marker9 = new google.maps.Marker({
   position:{lat:44.797396, lng:-93.527286},
   map:map,
-  icon:'https://www.shareicon.net/data/32x32/2016/05/16/766092_dog_512x512.png'
+  icon:'assets/images/mapIcon.png'
 });
 var infoWindow9 = new google.maps.InfoWindow({
 
@@ -184,7 +192,7 @@ map.setCenter(results[0].geometry.location);
 var marker10 = new google.maps.Marker({
   position:{lat:44.945970, lng:-92.907687},
   map:map,
-  icon:'https://www.shareicon.net/data/32x32/2016/05/16/766092_dog_512x512.png'
+  icon:'assets/images/mapIcon.png'
 });
 var infoWindow10 = new google.maps.InfoWindow({
 
@@ -201,7 +209,7 @@ map.setCenter(results[0].geometry.location);
 var marker11 = new google.maps.Marker({
   position:{lat:44.860236, lng:-93.405254},
   map:map,
-  icon:'https://www.shareicon.net/data/32x32/2016/05/16/766092_dog_512x512.png'
+  icon:'assets/images/mapIcon.png'
 });
 var infoWindow11 = new google.maps.InfoWindow({
 
@@ -218,7 +226,7 @@ map.setCenter(results[0].geometry.location);
 var marker12 = new google.maps.Marker({
   position:{lat:44.950371, lng:-93.322425},
   map:map,
-  icon:'https://www.shareicon.net/data/32x32/2016/05/16/766092_dog_512x512.png'
+  icon:'assets/images/mapIcon.png'
 });
 var infoWindow12 = new google.maps.InfoWindow({
 
@@ -237,7 +245,7 @@ map.setCenter(results[0].geometry.location);
 var marker13 = new google.maps.Marker({
   position:{lat:45.337500, lng:-92.998056},
   map:map,
-  icon:'https://www.shareicon.net/data/32x32/2016/05/16/766092_dog_512x512.png'
+  icon:'assets/images/mapIcon.png'
 });
 var infoWindow13 = new google.maps.InfoWindow({
 
@@ -255,7 +263,7 @@ map.setCenter(results[0].geometry.location);
 var marker14 = new google.maps.Marker({
   position:{lat:45.138259, lng:-93.831573},
   map:map,
-  icon:'https://www.shareicon.net/data/32x32/2016/05/16/766092_dog_512x512.png'
+  icon:'assets/images/mapIcon.png'
 });
 var infoWindow14 = new google.maps.InfoWindow({
 
@@ -273,7 +281,7 @@ map.setCenter(results[0].geometry.location);
 var marker15 = new google.maps.Marker({
   position:{lat:44.785829, lng:-93.600116},
   map:map,
-  icon:'https://www.shareicon.net/data/32x32/2016/05/16/766092_dog_512x512.png'
+  icon:'assets/images/mapIcon.png'
 });
 var infoWindow15 = new google.maps.InfoWindow({
 
@@ -291,7 +299,7 @@ map.setCenter(results[0].geometry.location);
 var marker16 = new google.maps.Marker({
   position:{lat:44.721930, lng:-92.843647},
   map:map,
-  icon:'https://www.shareicon.net/data/32x32/2016/05/16/766092_dog_512x512.png'
+  icon:'assets/images/mapIcon.png'
 });
 var infoWindow16 = new google.maps.InfoWindow({
 
@@ -309,7 +317,7 @@ map.setCenter(results[0].geometry.location);
 var marker17 = new google.maps.Marker({
   position:{lat:45.547864, lng:-93.585284},
   map:map,
-  icon:'https://www.shareicon.net/data/32x32/2016/05/16/766092_dog_512x512.png'
+  icon:'assets/images/mapIcon.png'
 });
 var infoWindow17 = new google.maps.InfoWindow({
 
@@ -327,7 +335,7 @@ infoWindow17.open(map,marker17);
 
         
       } else {
-        alert('Geocode was not successful for the following reason: ' + status);
+        console.log('Geocode was not successful for the following reason: ' + status); 
       }
     });
   }

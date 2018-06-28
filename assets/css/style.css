@@ -127,6 +127,7 @@ a:hover {
 	margin: 20px 0px 20px 0px;
 }
 
+
 #cardSpace {
 	height: 600px;
 	overflow: scroll;
@@ -138,4 +139,10 @@ a:hover {
 
 #mapHidden {
 	display: none;
+}
+#zip-error{
+	color: red;
+	font-weight: bold;
+	font-size: 12px;
+	display:none;
 }
