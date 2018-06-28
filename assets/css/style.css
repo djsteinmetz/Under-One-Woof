@@ -1,34 +1,44 @@
 #logo {
+	width: 100%;
 	max-width: 400px;
 }
 body{
 	font-family: 'Ubuntu', sans-serif;
-	background-color: rgb(239, 239, 240);
-
+	background-image: url("../images/subtle_white_feathers.zip");
 }
 .container-fluid{
 	width:100%;
 	height:100%;
 	margin:0;
 }
-
-nav {
-	margin-bottom:0px!Important;
-	height: 100%;
-}
-
 .navbar-brand {
 	padding: 3px 0px 0px 0px;
 }
-
-li{
-	margin-right: 5px;
+/* Text Styles */
+h1 {
+	font-size: 30px;
+	color: #222;
+	margin-bottom: 20px;
 }
-
 h2 {
 	color: #f1f1f1;
 }
+h3,
+th,
+label {
+	color: #222;
+	font-size: 20px;
 
+}
+h4 {
+	color: #f1f1f1;
+	font-size: 50px;
+}
+td {
+	color: #222;
+	font-size: 14px;
+}
+/* end */
 #jumbotron1{
 	/* The image used */
 	background-image: url("../images/photo-1477936432016-8172ed08637e-1.png");
@@ -40,8 +50,6 @@ h2 {
 	background-repeat: no-repeat;
 	background-size: cover;
 }
-
-
 #map {
 	height:500px;
 	width:100%;
@@ -49,7 +57,6 @@ h2 {
 	border: solid rgb(239, 239, 240) 10px;
 	size:100%;
 }
-
 .forms{
 	text-align:center;
 	font-size:18px;
@@ -59,25 +66,9 @@ h2 {
 .resourcePage{
 	color:rgb(255, 251, 236);
 }
-
-/* footer {
-	color:white;
-	text-align:center;
-	line-height:1.5;
-	padding-top:5px;
-	font-size:16px;
-	border-top: solid 2px rgb(152, 165, 160);
-} */
-
-
-#faq {
-	text-align: center;
-}
-
 #zip {
 	margin-bottom: 10px;
 }
-
 .footer {
 	color: white;
 	text-align:center;
@@ -85,28 +76,49 @@ h2 {
 	padding: 20px;
 	font-size:12px;
 	border-top: solid 2px rgb(152, 165, 160);
-
 }
-
+/* Frequently Asked Questions Page */
+#faq,
+#helpfulResources {
+	text-align: center;
+	color: #222;
+}
 .faqs {
-	color:rgb(255, 251, 236);
+	color: #222
 }
-
+.card {
+	margin-bottom: 25px;
+}
+/* end */
+/* Resources Page */
+#input-resource {
+	margin-bottom: 25px;
+}
 #searchBar {
 	max-width: 250px;
 	margin: auto;
-	background-color: #f1f1f1;
-	
 }
 .author {
 	margin: 0px 5px 0px 5px;
 }
-
 a {
-	color: #f1f1f1;
+	color: #48a0b5;
 }
-
 a:hover {
 	color: #48a0b5;
-	text-decoration: none;
+	font-weight: bolder;
+}
+/* parallax scroll */
+.parallax { 
+    /* The image used */
+    background-image: url("../images/photo-1515376455460-85197101c27a.jpeg");
+    /* Set a specific height */
+    height: 300px; 
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+	background-size: cover;
+	padding: 120px;
+	margin: 20px 0px 20px 0px;
 }
