@@ -133,13 +133,11 @@ a:hover {
 	overflow: scroll;
 }
 
+#mapHidden,
 #cardHidden {
 	display: none;
 }
 
-#mapHidden {
-	display: none;
-}
 #zip-error{
 	color: red;
 	font-weight: bold;
