@@ -16,6 +16,9 @@ $(document).ready(function () {
     function bindButtons() {
         // document.getElementById("submitZip").addEventListener("click", function(event) {
         $("#submitBtn").on("click", function (event) {
+            $("#cardHidden").css("display", "block");
+            $("#mapHidden").css("display", "block");
+            $("#mapDescriptor").html("Animal Shelters near your search area!");
             event.preventDefault();
             // getting zip code from form entry by user.
             var zip = $("#address").val().trim();
@@ -78,5 +81,4 @@ $(document).ready(function () {
             });
         });
     }
-
 });
