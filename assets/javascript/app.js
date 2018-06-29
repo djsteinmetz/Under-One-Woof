@@ -54,7 +54,7 @@ $(document).ready(function () {
                         // var breed = response.petfinder.pets.pet[i].breeds.breed;
                         // var age = response.petfinder.pets.pet[i].age.$t;
 
-                        var dogDiv = $("<div class='card'>");
+                        var dogDiv = $("<div class='card dogCard'>");
                         var div = $("<div class='card-body'>").html("<h1 class='card-title'>" + dogName + '</h1>');
                         if (gender === 'F') {
                             div.append('Female');
@@ -79,4 +79,5 @@ $(document).ready(function () {
             });
         });
     }
+
 });
