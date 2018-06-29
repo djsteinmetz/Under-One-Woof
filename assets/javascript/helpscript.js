@@ -31,8 +31,6 @@ $(document).on("click", "#input-resource", function (event) {
         description: description,
         link: link,
         dateAdded: firebase.database.ServerValue.TIMESTAMP // takes timesstamp of when the data goes in database.
-
-
     }); // end data-base push method
 });// end on-click function
 
@@ -42,7 +40,7 @@ database.ref().on("child_added", function(snapshot){
      //Dynamically creating the table rows and columns.
     var newval = snapshot.val();
     
-    var newRow = $("<tr>");
+    var newRow = $("<tr scope='row'>");
     var categoryTd = $("<td>");
     var descriptionTd = $("<td>");
     var linkTd = $("<td>");
@@ -51,6 +49,9 @@ database.ref().on("child_added", function(snapshot){
     categoryTd.text(newval.category);
     descriptionTd.text(newval.description);
     linkTd.html("<a href='" + newval.link + "' target='_blank'>" + newval.link + "</a>");
+    categoryTd.attr("data-label", "Category");
+    descriptionTd.attr("data-label", "Description");
+    linkTd.attr("data-label", "Link");
     console.log("<a href='" + newval.link + "' target='_blank'>" + newval.link + "</a>");
     // console.log(descriptionTd);
     newRow.append(categoryTd);

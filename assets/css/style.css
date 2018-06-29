@@ -5,6 +5,7 @@
 body{
 	font-family: 'Ubuntu', sans-serif;
 	background-image: url("../images/subtle_white_feathers.zip");
+	max-width:100%;
 }
 .container-fluid{
 	width:100%;
@@ -24,11 +25,13 @@ h2 {
 	color: #f1f1f1;
 }
 h3,
-th,
 label {
 	color: #222;
 	font-size: 20px;
-
+}
+th {
+	font-size: 18px;
+	color: #222;
 }
 h4 {
 	color: #f1f1f1;
@@ -68,8 +71,6 @@ td {
 .forms{
 	text-align:center;
 	font-size:18px;
-	
-	
 }
 .resourcePage{
 	color:rgb(255, 251, 236);
@@ -165,4 +166,85 @@ a:hover {
 	font-weight: bold;
 	font-size: 12px;
 	display:none;
+}
+
+/* 
+Generic Styling, for Desktops/Laptops 
+*/
+table { 
+  width: 100%; 
+  border-collapse: collapse; 
+}
+/* Zebra striping */
+tr:nth-of-type(odd) { 
+  background: #eee; 
+}
+th { 
+  background: #48a0b5; 
+  color: white; 
+  font-weight: bold; 
+}
+td, th { 
+  padding: 6px; 
+  border: 1px solid #ccc; 
+  text-align: left; 
+}
+
+/* 
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { border: 1px solid #ccc; }
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+	
+	td:before { 
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+	
+	/*
+	Label the data
+	*/
+	td:nth-of-type(1):before { content: "Category:"; }
+	td:nth-of-type(2):before { content: "Description:"; }
+	td:nth-of-type(3):before { content: "Link:"; }
+}
+
+@media screen and (max-width: 590px) {
+	h4 {
+		font-size: 40px;
+	}
+}
+@media screen and (max-width: 767px) {
+	#mapDescriptor {
+		margin-bottom: 25px;
+	}
 }
