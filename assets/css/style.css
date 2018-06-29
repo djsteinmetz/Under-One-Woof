@@ -61,6 +61,10 @@ td {
 	border: solid rgb(239, 239, 240) 10px;
 	size:100%;
 }
+
+#submitBtn {
+	margin: 20px;
+}
 .forms{
 	text-align:center;
 	font-size:18px;
@@ -89,10 +93,16 @@ td {
 	color: #222;
 }
 .faqs {
-	color: #222
+	color: #222;
+}
+#faq {
+	margin-bottom: 0px;
 }
 .card {
 	margin-bottom: 25px;
+}
+.card-columns {
+	margin-top: 25px;
 }
 /* end */
 /* Resources Page */
@@ -136,6 +146,18 @@ a:hover {
 #mapHidden,
 #cardHidden {
 	display: none;
+}
+
+.dogCard:hover,
+.card:hover {
+	-webkit-box-shadow: -1px 9px 40px -12px rgba(0,0,0,0.75);
+	-mox-box-shadow: -1px 9px 40px -12px rgba(0,0,0,0.75);
+	box-shadow: -1px 9px 40px -12px rgba(0,0,0,0.75);
+}
+
+.card {
+	margin-top: 8%;
+	margin-bottom: 8%;
 }
 
 #zip-error{
